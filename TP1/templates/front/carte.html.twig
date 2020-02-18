@@ -1,0 +1,9 @@
+{% extends'Layout/layout.html.twig' %}
+
+{% block title %}Category{% endblock %}
+{% block body %}
+    {% block titre %}Category{% endblock %}
+{% for categorie in categories %}
+    <li><a href="carte/{{ categorie.id }}">{{ categorie.name}} {{ categorie.dishes|length }}</a></li>
+{% endfor %}
+{% endblock %}
